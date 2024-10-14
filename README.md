@@ -35,3 +35,11 @@ LIMIT
 或許可以考慮根據旅宿的名字去分，比方說A-M/N-Z，但還是要看實際狀況決定。
 
 
+API 實作測驗
+SOLID 與 設計模式分別為何？
+單一職責原則 (SRP): 一個類別只負責一件事，例如 OrderValidator 負責驗證，OrderTransformer 負責轉換。
+介面隔離原則 (ISP): 用介面隔開模組間的依賴，保持抽象。介面（OrderValidatorInterface）保持不變，實作模組（Transformer）換掉也不應該影響到OrderSerive。
+依賴反向原則 (DIP): 高層模組不應該依賴低層模組，所以OrderSerive反轉注入到OrderController，OrderValidatorInterface/OrderTransformerInterface反轉注入到OrderSerive。
+策略模式: 我把不同的模組封裝起來，透過接口去調用，使得不同模組可以互相替換，靈活使用。
+
+
